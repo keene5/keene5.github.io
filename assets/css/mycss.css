@@ -1,0 +1,133 @@
+body {
+
+  background-color: cadetblue;
+
+}
+
+
+#navbox {
+  display: flex;
+  justify-content: space-between; 
+  align-items: end;
+  border: 3px solid black;
+  margin-top: 2%;
+  margin-left: 3%;
+  margin-right: 3%;
+  background-color: aqua;
+} 
+
+ .navbar-links {
+  display: flex;
+  font-weight: bolder;
+  text-decoration: none;
+  font-size: large;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+
+ul.navbar li a:hover {
+   background-color: #111; 
+  color: white;
+  text-decoration: underline;
+}
+
+
+h1 {
+  background-color: azure;
+  text-decoration-color: black;
+}
+
+#welcome-heading {
+  text-align: center;
+  font-size: 2.0rem;
+}
+
+.tc-manager {
+  color: darkblue;
+  font-family: cursive;
+  font-size: x-large;
+  font-weight: bolder;
+}
+.logo{
+  max-width: 50%;
+}
+
+.navbar-nav {
+  font-size: large;
+  font-weight: bolder;
+}
+
+.left-section {
+  display: flex;
+  width: 30%;
+  margin-right: 50px;
+  margin-left: 10px;
+}
+
+.link-container {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  font-weight: bolder;
+  font-size: large;
+}
+
+.scenario-form {
+  display: none;
+  /* display: flex; */
+  max-width: 60%;
+  padding: 10px;
+  border: 5px solid black;
+  background-color: aquamarine;
+  font-weight: bolder;
+}
+
+@media(max-width:776px){
+    .scenario-form { max-width: 70%;
+  }
+}
+.nav-link{
+  text-decoration-color: blue;
+
+}
+
+
+#scenario-id {
+  display: block;
+}
+
+.table th {
+  background-color: aquamarine;
+}
+
+.table td {
+  background-color: white;
+}
+
+#scenarios-table {
+  display: none;
+  border: 5px;
+  border-color: black;
+}
+
+
+#scenarios-table td.description-cell {
+  max-width: 50ch;
+  white-space: normal;
+  word-wrap: break-word;
+  word-wrap: break-word;
+}
+
+#dismiss-table-link {
+  display: none;
+}
+
+#cancel-scenario {
+  color: button-text;
+}
+.hamburger-button{
+ padding-right: 2%;=
+}
