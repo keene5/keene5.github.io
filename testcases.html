@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/mycss.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-light" id="navbox">
+    <div class="logo">
+    <a class="navbar-brand tc-manager" href="#">
+      <img src="assets/images/tcManager.jpg" alt="Test Case Manager Logo" class="img-fluid w-25">
+      Test Case Manager
+    </a>
+  </div>
+    <div class="hamburger-button">
+      <button class="navbar-toggler" id= "hamburger-button" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link text-dark" href="index.html">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="#">Help</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <br><br>
+  <div class="link-container">
+    <a href="#" id="add-scenario-link">Add a scenario</a>
+    <a href="#" id="view-scenarios-link">View All Scenarios</a>
+    <a href="#" id="dismiss-table-link">Close Scenarios List</a>
+  </div>
+  <div class="container">
+    <form class="scenario-form">
+      <label for="scenario-id">Scenario ID</label>
+      <input type="text" id="scenario-id" name="scenario-id">
+      <br>
+      <br>
+      <label for="scenario-desc">Scenario Description</label> <br><br>
+      <textarea id="scenario-desc" name="scenario-desc" rows="8" cols="30">
+      </textarea>
+      <br>
+      <br>
+      <label for="begin-date">Begin Date</label> <br><br>
+      <input type="date" id="begin-date" name="begin-date">
+      </textarea>
+      <br>
+      <br>
+      <label for="end-date">End Date</label> <br><br>
+      <input type="date" id="end-date" name="end-date">
+      </textarea>
+      <br>
+      <br>
+      <label for="incl-states">Include States</label><br>
+      <select name="states" id="incl-states" multiple size="5">
+        <option value="AL">AL</option>
+        <option value="AK">AK</option>
+        <option value="AZ">AZ</option>
+        <option value="ME">ME</option>
+        <option value="NH">NH</option>
+        <option value="FL">FL</option>
+      </select>
+      <br>
+      <br>
+      <label for="excl-states">Exclude States</label><br>
+      <select name="states" id="excl-states" multiple size="5">
+        <option value="AL">AL</option>
+        <option value="AK">AK</option>
+        <option value="AZ">AZ</option>
+        <option value="ME">ME</option>
+        <option value="NH">NH</option>
+        <option value="FL">FL</option>
+      </select>
+      <br>
+      <br>
+      <input type="submit" value="Submit" id="submit-scenario">
+      <input type="button" value="Cancel" id="cancel-scenario">
+    </form>
+  </div>
+  <div class="container">
+    <div class="table-responsive">
+      <table id="scenarios-table" class="table table-bordered scenario-table">
+        <thead>
+          <tr>
+            <th>ScenarioId</th>
+            <th>Description</th>
+            <th>Begin Date</th>
+            <th>End Date</th>
+            <th>Incl-States</th>
+            <th>Excl-States</th>
+          </tr>
+        </thead>
+        <tbody><br></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Success MODAL -->
+  <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="successModalLabel">Success!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          The scenario has been added to the system.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="assets/js/bootstrap.bundle.min.js"></script> -->
+  <script src="assets/js/scenario.js"></script>
+
+</body>
+
+</html>
